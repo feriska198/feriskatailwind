@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -17,10 +18,12 @@ export default function AboutPage() {
         className="flex items-center gap-8 max-w-3xl bg-white/90 p-8 rounded-2xl shadow-lg"
       >
         {/* Foto */}
-        <img
+        <Image
           src="/voto.jpg"
           alt="Feriska"
-          className="w-56 h-72 rounded-[50%/40%] object-cover border-[3px] border-pink-300 shadow-md"
+          width={224} // w-56 = 224px
+          height={288} // h-72 = 288px
+          className="rounded-[50%/40%] object-cover border-[3px] border-pink-300 shadow-md"
         />
 
         {/* Biodata */}
@@ -38,7 +41,7 @@ export default function AboutPage() {
             <strong>Jurusan:</strong> Rekayasa Perangkat Lunak (RPL)
           </p>
           <p className="text-gray-600 mt-4">
-            "hai selamat datang, tidak ada banyak yang bisa kalian lihat disini :)"
+            &quot;hai selamat datang, tidak ada banyak yang bisa kalian lihat disini :)&quot;
           </p>
         </div>
       </section>

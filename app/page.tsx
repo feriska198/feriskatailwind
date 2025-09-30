@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -11,10 +12,12 @@ export default function HomePage() {
 
       {/* Foto & Nama */}
       <section className="flex flex-col items-center mb-4">
-        <img
+        <Image
           src="/Hello!.jpg"
           alt="Feriska"
-          className="w-44 h-56 rounded-full object-cover mb-4 border-4 border-black"
+          width={176} // w-44 = 176px
+          height={224} // h-56 = 224px
+          className="rounded-full object-cover mb-4 border-4 border-black"
         />
         <h1 className="px-4 py-1 rounded-md ">
           AKU FERISKA AGUSTINA FITRIA
