@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -10,11 +10,15 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  // ganti any → ChangeEvent
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  // ganti any → FormEvent
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Data:", form);
     alert("Pesan berhasil ditampilkan di console!");
